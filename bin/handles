@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+
+. $HANDLES_PATH/src/helpers.sh
+
+if [[ $# -eq 0 ]]; then
+  echo "🤖 “Comfort is irrelevant.”"
+  echo ""
+  echo "Actions available:"
+  echo "  setup - start the machine installation process"
+  echo "  update - coming soon"
+  echo "  exit - end my life"
+  echo ""
+  echo -n "🤖 “Action required” > "
+  read action
+  echo ""
+else
+  action=$1
+fi
+
+case "$action" in
+  exit)
+    echo "🤖 “Attention. Emergency. Attention… Urgent. Action required. You must patch the telephone device back through the console unit….”"
+    exit 0
+  ;;
+  --help)
+    echo "Usage:"
+    echo "    handles"
+    echo "    handles [<command>|--help]"
+    echo "Commands:"
+    echo "    setup"
+    echo "      coming soon"
+    echo "    update"
+    echo "      coming soon"
+  ;;
+  setup)
+    echo "🤖 “setup”"
+    echo ""
+    $HANDLES_PATH/scripts/setup.zsh
+  ;;
+  *)
+    echo "🤖 “I have developed a fault. I… I have developed a fault.”"
+  ;;
+esac

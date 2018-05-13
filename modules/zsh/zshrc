@@ -1,0 +1,11 @@
+ulimit -n 1024
+
+if [[ -f $HOME/.github_token ]]
+then
+  export GITHUB_TOKEN=$(cat $HOME/.github_token)
+fi
+
+alias fuck='sudo $(history -p \!\!)'
+alias git=hub
+export PATH="$PATH:`yarn global bin`"
+source "$HOME/dev/overblog/Docker/src/docker.sh"

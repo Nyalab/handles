@@ -1,0 +1,7 @@
+[submodule "modules/iterm2/dracula"]
+	path = modules/iterm2/dracula
+	url = https://github.com/dracula/iterm.git
+
+[submodule "modules/iterm2/rainglow"]
+	path = modules/iterm2/rainglow
+	url = https://github.com/rainglow/iterm.git

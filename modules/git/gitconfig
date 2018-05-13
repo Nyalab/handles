@@ -1,0 +1,59 @@
+[user]
+  name = Sébastien Balayn
+  email = sebastien.balayn@gmail.com
+
+[github]
+  user = Nyalab
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+
+[diff]
+  compactionHeuristic = true
+
+[alias]
+  s = status
+  st = status -sb
+  c = commit
+  amend = !git commit --amend --no-edit --date=\"$(date +%s)\"
+  co = checkout
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  spp = !git stash clear && git stash && git pull --rebase && git stash pop
+  ctags = !.git/hooks/ctags
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master' | xargs -n 1 git branch -d"
+  rockstarsyncwithremote = "!git fetch -p && for branch in git branch -vv | grep ': gone ]' | gawk '{print $1}'; do git branch -D $branch; done"
+  please = push --force-with-lease
+  slavery = "!git branch | grep -v "master" | xargs git branch -D"
+
+[core]
+  editor = vim
+  pager = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
+  excludesfile = ~/dotfiles/git/gitignore_global
+
+[color]
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[init]
+  templatedir = ~/.git_template
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+
+[rerere]
+  enable = true

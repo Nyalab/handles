@@ -1,0 +1,10 @@
+find a workflow for ssh key
+open apps that need configuration or just launch things that need to be launched (magnet) / maybe reboot ?
+dynamicly change path for global gitignore
+mas signin should be asked at the start
+try mackup (https://github.com/lra/mackup)
+test if /usr/local/bin/zsh exists already at the end of /etc/shells file and don't add it if so
+do an update and an install process
+editor in gitconfig should be vim only if vim installed, else, find something by default
+zshrc is a mess
+extra zshrc should be sourced to not be versionned

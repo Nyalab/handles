@@ -1,0 +1,175 @@
+set nocompatible 	  " we want vim not vi
+filetype off
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'editorconfig/editorconfig-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'evidens/vim-twig'
+Plug 'mileszs/ack.vim'
+Plug 'majutsushi/tagbar'
+"Plug 'tmhedberg/matchit'
+Plug 'joeytwiddle/sexy_scroller.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+"Plug 'pangloss/vim-javascript'
+Plug 'Yggdroot/indentLine'
+Plug 'jamessan/vim-gnupg'
+call plug#end()
+
+" -- Display
+set title
+set number
+set ruler
+set showcmd
+set showmatch
+set wrap
+set laststatus=2
+set confirm
+
+set mouse=a
+
+" -- rendering
+set encoding=utf8
+set wrap
+set linebreak " avoid wrapping a line in the middle of a word
+set scrolloff=5 " lines around cursor
+syntax enable
+filetype on
+filetype plugin indent on
+
+" -- Recherche
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" -- Beep
+set visualbell
+set noerrorbells
+set t_vb=
+
+" -- perf
+set lazyredraw " don't update screen rendering when scripts/macro are working
+
+" Active le comportement 'habituel' de la touche retour en arriere
+set backspace=indent,eol,start
+
+set hidden
+set autoread
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=.git,.svn
+
+" mapping
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" remaps
+" move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" remap 0 to first non blank char
+map 0 ^
+" move lines with cmd-j/k
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+highlight Visual cterm=reverse ctermbg=NONE " enable the highligh on visual mode (broken with the current color scheme)
+
+" map to change CWD to current dir of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+set backupdir=
+set directory=
+set nowritebackup
+set noswapfile
+
+" Esc -> ;;
+:imap ;; <Esc>
+:map ;; <Esc>
+
+" CtrlP
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --follow
+      \ -U
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore node_modules
+      \ --ignore vendor
+      \ --ignore cache
+      \ -g ""'
+let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_working_path_mode = 0
+nmap <Leader>oo :CtrlP<cr>
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+set tags=./tags;,tags;
+
+" Expand %% to dir of current file
+cmap %% <C-R>=expand('%:h').'/'<cr>
+
+"" Shared clipboard with the OS
+
+set clipboard=unnamed
+
+"" Spaces/Tabs
+
+set expandtab "Use spaces instead of tabs
+set shiftwidth=2
+set shiftround " the indentation will always be a multiple of shiftwidth
+set tabstop=2
+set smarttab " insert 'tabstop' number of space when 'tab' is pressed
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
+"" Indentation guides
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+
+" ack
+let g:ackprg="ag --nocolor --nogroup --column"
+" Place un marqueur et cherche
+nmap <leader>j mA:Ack!<space>
+" Place un marqueur et cherche le mot sous le curseur
+nmap <leader>ja mA:Ack! "<C-r>=expand("<cword>")<cr>"
+nmap <leader>jA mA:Ack! "<C-r>=expand("<cWORD>")<cr>"
+
+" :autocmd BufWritePost * execute '!git ctags &'
+
+" netrw
+let g:netrw_liststyle = 3 " tree style
+let g:netrw_banner = 0 " hide banner
+let g:netrw_browse_split = 4 " 1: hs, 2: vs, 3: new tab, 4: previous window
+let g:netrw_winsize = 25 " width percentage
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore " launch netrw when vim starts
+" augroup END
+
+" airline
+let g:airline_theme='bubblegum'
+let g:airline_powerline_fonts = 1
+let g:netrw_altv=1
