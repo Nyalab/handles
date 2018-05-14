@@ -2,7 +2,7 @@
 
 brew install mas
 
-mas signin --dialog
+# mas signin --dialog
 mas install 557168941 #Tweetdeck
 mas install 992076693 #MindNode
 mas install 441258766 #Magnet

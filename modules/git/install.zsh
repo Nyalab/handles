@@ -5,11 +5,11 @@
 brew install git
 brew install hub
 
-ln -sf $HANDLES_PATH/git/gitconfig $HOME/.gitconfig
+ln -sf $HANDLES_PATH/modules/git/gitconfig $HOME/.gitconfig
 
 echo "Creating a GitHub token:"
 echo "  Login to GitHub to get a token & paste it (ENTER to skip)"
-open "https://github.com/settings/applications"
+open "https://github.com/settings/tokens/new"
 echo -n "🤖 “The message is a request for information” > "
 read gh_token
 if [ "$gh_token" != "" ]; then

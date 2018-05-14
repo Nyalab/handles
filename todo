@@ -8,3 +8,10 @@ do an update and an install process
 editor in gitconfig should be vim only if vim installed, else, find something by default
 zshrc is a mess
 extra zshrc should be sourced to not be versionned
+sudo is asked for zsh but still asked at the beginning
+need to find a way to install an working IE/Edge
+handle the dock icons
+ask for the right permissions for token in github URL
+see why vim has so many dependencies
+mas needs a login, store it in a non versionned config file
+figure out how to set launch apps

@@ -9,7 +9,7 @@ echo -n "🤖 “Method choice required” > "
 read method
 echo ""
 
-if [ $method  = "preset"]; then
+if [ $method = "preset" ]; then
   # echo "Configurations available:"
   # echo "    minimal - coming soon - just the bare minimum, useful for ad hoc work"
   # echo "    home - h"

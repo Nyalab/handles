@@ -2,6 +2,6 @@
 
 brew cask install atom
 
-ln -s $HANDLES_PATH/atom/config $HOME/.atom
+ln -sfn $HANDLES_PATH/modules/atom/config $HOME/.atom
 
-apminstall package-sync
+apm install package-sync
