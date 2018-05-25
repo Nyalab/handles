@@ -15,3 +15,9 @@ ask for the right permissions for token in github URL
 see why vim has so many dependencies
 mas needs a login, store it in a non versionned config file
 figure out how to set launch apps
+style zsh completions: https://github.com/sorin-ionescu/prezto/blob/25d8db301d5939040ff4aa6e7211d27e74f2d0d9/modules/completion/init.zsh#L44
+add zsh completions: composer, symfony console, node, yarn, ssh-copy-id, and others
+handle visual notification for rebase/merge/bisect in prompt: https://github.com/sepehr/sepshell/blob/master/sepshell.zsh-theme#L78-L84
+check remote status in async in prompt
+SSH handling in prompt: https://github.com/andrepolischuk/neat/blob/master/neat.zsh#L27-L35
+see if i can borrow things from: https://github.com/denysdovhan/spaceship-prompt

@@ -46,23 +46,64 @@ alias rm="rm -i"
 
 # prompt
 setopt PROMPT_SUBST
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' use-simple true
-zstyle ':vcs_info:*' stagedstr '✚'
-zstyle ':vcs_info:*' unstagedstr '*'
-zstyle ':vcs_info:git*' formats ' %b%u%c'
-zstyle ':vcs_info:git*' actionformats ' %b|%a'
-precmd() { vcs_info }
-PROMPT='%c%F{242}${vcs_info_msg_0_}%f %(?.%F{blue}.%F{red})%#%f '
-RPROMPT=''
+prompt_status() {
+  echo -n "%(?.%F{green}.%F{red})● %f"
+}
+prompt_user() {
+  if [[ $UID -eq 0 ]]; then
+    echo -n "%K{red}%F{white}root %k%f"
+  fi
+}
+prompt_dir() {
+  echo -n "%F{cyan}%~ %f"
+}
+prompt_git() {
+  local repo git_status ref
+  # repo=$(git rev-parse --git-dir 2>/dev/null)
+  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git show-ref --head -s --abbrev |head -n1 2> /dev/null)
+    echo -n "%F{yellow}⤞ ${ref/refs\/heads\//}"
+    git_status=$(git status --porcelain 2> /dev/null | tail -n1)
+    if [[ -n $git_status ]]; then
+      echo -n "*"
+    fi
+    echo -n " %f"
+  fi
+}
+PROMPT='
+%{%f%b%k%}$(prompt_status)$(prompt_user)$(prompt_dir)$(prompt_git)\$ '
+RPROMPT='%*'
+
+
+# completions
+setopt ALWAYS_TO_END # cursor to end of the word
+setopt PATH_DIRS # search even if there is a slash (i.e. : useful for `bin/cons<tab>`)
+setopt AUTO_MENU # when i smash <tab>, you have to show me the completions, FAST
+setopt AUTO_PARAM_SLASH # if the completion is a dir, add the trailing slash
+setopt AUTO_LIST # automatically list choices on ambiguous completion.
+unsetopt MENU_COMPLETE # do not pick automatically the first completion
+
+autoload -Uz compinit
+_comp_files=($HOME/.zcompdump(Nm-20)) # 20 hours of cache on completions
+if (( $#_comp_files )); then
+  compinit -i -C
+else
+  compinit -i
+fi
+unset _comp_files
+
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path $HOME/.zcompcache
 
 if [[ -f $HOME/.github_token ]]; then
   export GITHUB_TOKEN=$(cat $HOME/.github_token)
 fi
 
+# fancy
+alias szshrc='source ~/.zshrc'
+alias h='history -iD'
 alias fuck='sudo $(history -p \!\!)'
 alias git=hub
+
 export PATH="$PATH:`yarn global bin`"
-source "$HOME/dev/overblog/Docker/src/docker.sh"
+# source "$HOME/dev/overblog/Docker/src/docker.sh"

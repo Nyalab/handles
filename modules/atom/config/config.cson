@@ -83,6 +83,7 @@
     forceOverwrite: true
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
       showInStatusBar: true
     prettierOptions:
       bracketSpacing: false
@@ -121,8 +122,6 @@
     position: "Left"
   "tree-view":
     focusOnReveal: false
-    hideIgnoredNames: true
-    showOnRightSide: false
     squashDirectoryNames: true
   welcome:
     showOnStartup: false

@@ -3,6 +3,8 @@
 brew install node
 brew install yarn
 
+brew cask install sketch
+
 brew cask install firefox
 brew cask install google-chrome
 
