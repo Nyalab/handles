@@ -27,16 +27,19 @@ bindkey -e
 bindkey "^[^[[D" backward-word         # alt-left
 bindkey "^[^[[C" forward-word          # alt-right
 bindkey "^[^?" backward-kill-word      # alt-backspace
+bindkey "^[[3~" delete-char            # delete
+bindkey "^[3;5~" delete-char           # delete
 
 # aliases
 alias grep="grep --color=auto"
 alias less="less -R"
 alias l="ls -1A"
-alias ls="ls -FG"
+alias ls="ls -HFG"
 alias ll="ls -lh"
 alias la="ll -A"
 alias sl="ls"
 alias df="df -kh"
+alias man="LC_ALL=C LANG=C man"
 
 # safe
 alias cp="cp -i"
@@ -55,14 +58,15 @@ prompt_user() {
   fi
 }
 prompt_dir() {
-  echo -n "%F{cyan}%~ %f"
+  # https://framagit.org/mpo/dotfiles/blob/0fbc8e070793f060b90690fb99d526e8f94fd8ad/zsh/.zsh-color-names
+  echo -n "%F{green}%~ %f"
 }
 prompt_git() {
   local repo git_status ref
   # repo=$(git rev-parse --git-dir 2>/dev/null)
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git show-ref --head -s --abbrev |head -n1 2> /dev/null)
-    echo -n "%F{yellow}⤞ ${ref/refs\/heads\//}"
+    echo -n "%F{magenta}⤞ ${ref/refs\/heads\//}"
     git_status=$(git status --porcelain 2> /dev/null | tail -n1)
     if [[ -n $git_status ]]; then
       echo -n "*"
@@ -80,6 +84,7 @@ setopt ALWAYS_TO_END # cursor to end of the word
 setopt PATH_DIRS # search even if there is a slash (i.e. : useful for `bin/cons<tab>`)
 setopt AUTO_MENU # when i smash <tab>, you have to show me the completions, FAST
 setopt AUTO_PARAM_SLASH # if the completion is a dir, add the trailing slash
+setopt AUTO_REMOVE_SLASH
 setopt AUTO_LIST # automatically list choices on ambiguous completion.
 unsetopt MENU_COMPLETE # do not pick automatically the first completion
 
@@ -92,6 +97,7 @@ else
 fi
 unset _comp_files
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path $HOME/.zcompcache
 
@@ -106,4 +112,5 @@ alias fuck='sudo $(history -p \!\!)'
 alias git=hub
 
 export PATH="$PATH:`yarn global bin`"
-# source "$HOME/dev/overblog/Docker/src/docker.sh"
+OB_PATH_WORKSPACE="$HOME/dev/overblog"
+source "$OB_PATH_WORKSPACE/Docker/src/docker.sh"
