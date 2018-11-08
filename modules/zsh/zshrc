@@ -58,8 +58,16 @@ prompt_user() {
   fi
 }
 prompt_dir() {
-  # https://framagit.org/mpo/dotfiles/blob/0fbc8e070793f060b90690fb99d526e8f94fd8ad/zsh/.zsh-color-names
-  echo -n "%F{green}%~ %f"
+  # colors for the prompt at https://framagit.org/mpo/dotfiles/blob/0fbc8e070793f060b90690fb99d526e8f94fd8ad/zsh/.zsh-color-names
+  # part of shrink path stolen from https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/shrink-path/shrink-path.plugin.zsh
+  echo -n "%F{green}"
+  echo -n $(pwd | perl -pe "
+   BEGIN {
+      binmode STDIN,  ':encoding(UTF-8)';
+      binmode STDOUT, ':encoding(UTF-8)';
+    }; s|^$HOME|~|g; s|/([^/])[^/]*(?=/)|/\$1|g
+  ")
+  echo -n " %f"
 }
 prompt_git() {
   local repo git_status ref
@@ -112,5 +120,3 @@ alias fuck='sudo $(history -p \!\!)'
 alias git=hub
 
 export PATH="$PATH:`yarn global bin`"
-OB_PATH_WORKSPACE="$HOME/dev/overblog"
-source "$OB_PATH_WORKSPACE/Docker/src/docker.sh"

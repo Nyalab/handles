@@ -27,6 +27,7 @@ packages: [
   "php-twig"
   "prettier-atom"
   "rainglow"
+  "svg-preview"
   "teletype"
   "todo-show"
   "toggle-quotes"

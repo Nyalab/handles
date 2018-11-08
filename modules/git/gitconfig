@@ -1,6 +1,6 @@
 [user]
-  name = Sébastien Balayn
-  email = sebastien.balayn@gmail.com
+	name = Sébastien Balayn
+	email = sebastien@loungeup.com
 
 [github]
   user = Nyalab
@@ -48,8 +48,6 @@
   added = yellow
   changed = green
   untracked = cyan
-[init]
-  templatedir = ~/.git_template
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f

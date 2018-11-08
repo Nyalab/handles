@@ -84,6 +84,7 @@
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
+      isDisabledIfNotInPackageJson: true
       showInStatusBar: true
     prettierOptions:
       bracketSpacing: false
@@ -97,24 +98,6 @@
     enableVcsColoring: true
     usePreviewTabs: true
   "todo-show":
-    findTheseRegexes: [
-      "FIXMEs"
-      "/\\bFIXME:?\\d*($|\\s?.*$)/g"
-      "TODOs"
-      "/\\bTODO:?\\d*($|\\s?.*$)/g"
-      "CHANGEDs"
-      "/\\bCHANGED:?\\d*($|\\s?.*$)/g"
-      "XXXs"
-      "/\\bXXX:?\\d*($|\\s?.*$)/g"
-      "IDEAs"
-      "/\\bIDEA:?\\d*($|\\s?.*$)/g"
-      "HACKs"
-      "/\\bHACK:?\\d*($|\\s?.*$)/g"
-      "NOTEs"
-      "/\\bNOTE:?\\d*($|\\s?.*$)/g"
-      "REVIEWs"
-      "/\\bREVIEW:?\\d*($|\\s?.*$)/g"
-    ]
     sortBy: "File"
   "toggle-quotes": {}
   "tool-bar":

@@ -3,7 +3,7 @@
 . $HANDLES_PATH/src/helpers.sh
 
 if [ $(brew list zsh &> /dev/null; printf $?) -eq 1 ]; then
-  display_info "installing brew"
+  display_info "installing zsh"
   brew install zsh
   echo "$(brew --prefix)/bin/zsh" | sudo tee -a /etc/shells
   chsh -s $(brew --prefix)/bin/zsh
