@@ -96,6 +96,8 @@ setopt AUTO_REMOVE_SLASH
 setopt AUTO_LIST # automatically list choices on ambiguous completion.
 unsetopt MENU_COMPLETE # do not pick automatically the first completion
 
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
+
 autoload -Uz compinit
 _comp_files=($HOME/.zcompdump(Nm-20)) # 20 hours of cache on completions
 if (( $#_comp_files )); then

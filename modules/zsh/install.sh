@@ -10,6 +10,7 @@ if [ $(brew list zsh &> /dev/null; printf $?) -eq 1 ]; then
   display_warning "you must restart the shell session to finish the zsh installation"
 fi
 
+brew install zsh-completions
 # brew install zsh-syntax-highlighting
 
 ln -sfn $HANDLES_PATH/modules/zsh/zshrc $HOME/.zshrc
