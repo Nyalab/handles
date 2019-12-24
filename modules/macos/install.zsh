@@ -3,10 +3,14 @@
 brew install mas
 
 # mas signin --dialog
-mas install 557168941 #Tweetdeck
+mas install 557168941 #Tweetbot
 mas install 992076693 #MindNode
 mas install 441258766 #Magnet
 mas install 409183694 #Keynote
+mas install 1470584107 #Dato
+mas install 957810159 #Raindrop.io for Safari
+mas install 1480882940 #Aerate
+mas install 1475897096 #Jira
 
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles TRUE

@@ -10,24 +10,24 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
-Plug 'evidens/vim-twig'
 Plug 'mileszs/ack.vim'
 Plug 'majutsushi/tagbar'
-"Plug 'tmhedberg/matchit'
+" Plug 'tmhedberg/matchit'
 Plug 'joeytwiddle/sexy_scroller.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-"Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
+Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
-Plug 'jamessan/vim-gnupg'
+" Plug 'jamessan/vim-gnupg'
 call plug#end()
 
 " -- Display
 set title
-set number
+set number relativenumber
 set ruler
 set showcmd
 set showmatch
@@ -45,6 +45,11 @@ set scrolloff=5 " lines around cursor
 syntax enable
 filetype on
 filetype plugin indent on
+
+" -- splits
+set splitbelow " open split to the right by default
+set splitright " open split to the bottom by default
+nnoremap z= <C-w>= " resize (z0<CR> minimize, z99<CR> maximize, z=<CR> equalize)
 
 " -- Recherche
 set ignorecase
@@ -162,12 +167,14 @@ nmap <leader>jA mA:Ack! "<C-r>=expand("<cWORD>")<cr>"
 " netrw
 let g:netrw_liststyle = 3 " tree style
 let g:netrw_banner = 0 " hide banner
-let g:netrw_browse_split = 4 " 1: hs, 2: vs, 3: new tab, 4: previous window
+" let g:netrw_browse_split = 4 " 1: hs, 2: vs, 3: new tab, 4: previous window
+" disable for now because it is better to get used to :Rex
 let g:netrw_winsize = 25 " width percentage
 " augroup ProjectDrawer
 "   autocmd!
 "   autocmd VimEnter * :Vexplore " launch netrw when vim starts
 " augroup END
+let g:netrw_localrmdir='rm -r' " or else netrw cannot delete not empty directories
 
 " airline
 let g:airline_theme='bubblegum'

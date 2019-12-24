@@ -121,4 +121,6 @@ alias h='history -iD'
 alias fuck='sudo $(history -p \!\!)'
 alias git=hub
 
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 export PATH="$PATH:`yarn global bin`"
