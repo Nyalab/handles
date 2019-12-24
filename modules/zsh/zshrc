@@ -31,13 +31,26 @@ bindkey "^[[3~" delete-char            # delete
 bindkey "^[3;5~" delete-char           # delete
 
 # aliases
+alias cat="bat"
 alias grep="grep --color=auto"
 alias less="less -R"
-alias l="ls -1A"
-alias ls="ls -HFG"
-alias ll="ls -lh"
-alias la="ll -A"
-alias sl="ls"
+# alias ls="ls -HFG"
+# alias ll="ls -lh"
+# alias la="ll -A"
+# alias sl="ls"
+alias l="exa -a1" # short for "1"line "A"ll
+alias ls="exa -F" # with suffixes (/ for dirs, ect.)
+alias sl="exa -F" # for typos
+alias ll="exa -lF --git" # full
+alias la="exa -alF --git" # full with hidden files
+alias lt="exa -a --tree" # tree
+alias lt1="exa -a --tree -L1" # tree level 1
+alias lt2="exa -a --tree -L2" # tree level 2
+alias llt="exa -a --tree" # long tree
+alias llt1="exa -a --tree -L1" # long tree level 1
+alias llt2="exa -a --tree -L2" # long tree level 2
+alias lr="exa -R" # recurse
+
 alias df="df -kh"
 alias man="LC_ALL=C LANG=C man"
 
@@ -48,6 +61,9 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 # prompt
+PS1_EMOJIS=("😀" "😁" "😂" "🤣" "😃" "😄" "😅" "😆" "😉" "😊" "😋" "😎" "😍" "😘" "🥰" "😗" "😙" "😚" "☺️" "🙂" "🤗" "🤩" "🤔" "🤨" "😐" "😑" "😶" "🙄" "😏" "😣" "😥" "😮" "🤐" "😯" "😪" "😫" "😴" "😌" "😛" "😜" "😝" "🤤" "😒" "😓" "😔" "😕" "🙃" "🤑" "😲" "☹️" "🙁" "😖" "😞" "😟" "😤" "😢" "😭" "😦" "😧" "😨" "😩" "🤯" "😬" "😰" "😱" "🥵" "🥶" "😳" "🤪" "😵" "😡" "😠" "🤬" "😷" "🤒" "🤕" "🤢" "🤮" "🤧" "😇" "🤠" "🤡" "🥳" "🥴" "🥺" "🤥" "🤫" "🤭" "🧐" "🤓" "😈" "👿" "👹" "👺" "💀" "👻" "👽" "🤖" "💩")
+NUMBER_OF_EMOJIS=${#PS1_EMOJIS[@]}
+
 setopt PROMPT_SUBST
 prompt_status() {
   echo -n "%(?.%F{green}.%F{red})● %f"
@@ -83,8 +99,12 @@ prompt_git() {
   fi
 }
 PROMPT='
-%{%f%b%k%}$(prompt_status)$(prompt_user)$(prompt_dir)$(prompt_git)\$ '
+%{%f%b%k%}$(prompt_status)${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS]} $(prompt_user)$(prompt_dir)$(prompt_git)\$ '
 RPROMPT='%*'
+
+# utils
+## https://github.com/wting/autojump
+[ -f `brew --prefix`/etc/profile.d/autojump.sh ] && . `brew --prefix`/etc/profile.d/autojump.sh
 
 
 # completions

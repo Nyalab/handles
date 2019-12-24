@@ -2,6 +2,7 @@
 
 brew install node
 brew install yarn
+brew install exa
 
 brew cask install visual-studio-code
 brew cask install sketch
