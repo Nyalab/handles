@@ -18,6 +18,7 @@
   compactionHeuristic = true
 
 [alias]
+  aliases = config --get-regexp ^alias\\.
   s = status
   st = status -sb
   c = commit

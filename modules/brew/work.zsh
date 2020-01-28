@@ -6,6 +6,7 @@ brew install exa
 
 brew cask install visual-studio-code
 brew cask install sketch
+brew cask install kap # screen recorder
 brew cask install zeplin
 
 brew cask install firefox
@@ -23,3 +24,5 @@ brew cask install font-open-sans
 brew cask install font-open-sans-condensed
 brew cask install font-roboto
 brew cask install font-cascadia
+
+# python issue https://holgr.com/python-3-in-macos-catalina-fixing-the-abort-trap/

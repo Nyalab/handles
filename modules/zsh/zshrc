@@ -143,4 +143,4 @@ alias git=hub
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export PATH="$PATH:`yarn global bin`"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH:`yarn global bin`"
