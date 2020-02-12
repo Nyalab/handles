@@ -24,6 +24,8 @@
   c = commit
   amend = !git commit --amend --no-edit --date=\"$(date +%s)\"
   co = checkout
+  sw = switch
+  rs = restore
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   spp = !git stash clear && git stash && git pull --rebase && git stash pop
   ctags = !.git/hooks/ctags
