@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-brew tap caskroom/cask
+brew tap homebrew/cask-fonts
 
 # brew cask install xquartz
 

@@ -11,6 +11,7 @@ mas install 1470584107 #Dato
 mas install 957810159 #Raindrop.io for Safari
 mas install 1480882940 #Aerate
 mas install 1475897096 #Jira
+mas install 1448916662 #Step Two
 
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles TRUE

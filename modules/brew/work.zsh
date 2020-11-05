@@ -4,8 +4,11 @@ brew install node
 brew install yarn
 brew install exa
 
+brew cask install monitorcontrol
 brew cask install visual-studio-code
+brew cask install insomnia # for testing apis
 brew cask install sketch
+brew cask install sizzy
 brew cask install kap # screen recorder
 brew cask install zeplin
 
@@ -16,7 +19,7 @@ brew cask install google-chrome
 brew cask install discord
 brew cask install slack
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-fantasque-sans-mono
 brew cask install font-fira-code
 brew cask install font-lato

@@ -24,3 +24,6 @@ brew install jez/formulae/git-heatmap
 # display a summary of your past commits
 # https://github.com/kamranahmedse/git-standup
 npm install -g git-standup
+
+# macOS notifications
+brew cask install gitpigeon
