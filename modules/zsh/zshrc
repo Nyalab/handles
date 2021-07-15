@@ -136,7 +136,7 @@ if [[ -f $HOME/.github_token ]]; then
 fi
 
 # include other zshrc
-source "${0:A:h}/../docker/docker.zsh" # $0:A is current file path in zsh (including symlink) (:h gives us the directory)
+source "${0:A:h}/../docker/docker.zsh" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
 
 # fancy
 alias szs='source ~/.zshrc'
