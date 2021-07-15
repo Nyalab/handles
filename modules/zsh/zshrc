@@ -135,12 +135,15 @@ if [[ -f $HOME/.github_token ]]; then
   export GITHUB_TOKEN=$(cat $HOME/.github_token)
 fi
 
+# include other zshrc
+source "${0:A:h}/../docker/docker.zsh" # $0:A is current file path in zsh (including symlink) (:h gives us the directory)
+
 # fancy
-alias szshrc='source ~/.zshrc'
+alias szs='source ~/.zshrc'
 alias h='history -iD'
 alias fuck='sudo $(history -p \!\!)'
 alias git=hub
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export PATH="/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`"
+export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`"
