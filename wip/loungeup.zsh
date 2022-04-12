@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-brew cask install zoomus
+brew cask install zoom
 
 brew install ansible
 brew install git-flow-avh

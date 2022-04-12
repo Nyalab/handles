@@ -3,18 +3,23 @@
 brew install node
 brew install yarn
 brew install pnpm
-brew install exa
+brew install autojump # easy `j` command for dir jumping
+brew install bat # better cat
+brew install exa # better ls
 
 brew cask install visual-studio-code
 brew cask install insomnia # for testing apis
+brew cask install postbird # for exploring databases
 brew cask install sketch
 brew cask install sizzy
+brew cask install figma
 brew cask install kap # screen recorder
 brew cask install zeplin
 
 brew cask install firefox
 brew cask install homebrew/cask-versions/firefox-developer-edition
 brew cask install google-chrome
+brew cask install safari-technology-preview
 
 brew cask install discord
 brew cask install slack

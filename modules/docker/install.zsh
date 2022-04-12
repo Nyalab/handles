@@ -2,3 +2,5 @@
 
 brew cask install docker
 npm install -g dockly
+
+brew install dive
