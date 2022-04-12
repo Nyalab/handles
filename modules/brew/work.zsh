@@ -2,9 +2,9 @@
 
 brew install node
 brew install yarn
+brew install pnpm
 brew install exa
 
-brew cask install monitorcontrol
 brew cask install visual-studio-code
 brew cask install insomnia # for testing apis
 brew cask install sketch

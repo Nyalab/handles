@@ -4,16 +4,6 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>AtomOneLight</key>
@@ -893,63 +883,6 @@
 	<true/>
 	<key>JobName</key>
 	<true/>
-	<key>LoadPrefsFromCustomFolder</key>
-	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/handles/modules/iterm2/rainglow/themes</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{799, 448}</string>
-	<key>NSQuotedKeystrokeBinding</key>
-	<string></string>
-	<key>NSRepeatCountBinding</key>
-	<string></string>
-	<key>NSScrollAnimationEnabled</key>
-	<false/>
-	<key>NSScrollViewShouldScrollUnderTitlebar</key>
-	<false/>
-	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
-	<array>
-		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
-		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
-	</array>
-	<key>NSTableView Columns v2 KeyBingingTable</key>
-	<data>
-	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
-	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVVBcnJheYABrgsMEx4fICEiIyQqNDU2VSRu
-	dWxs0g0ODxJaTlMub2JqZWN0c1YkY2xhc3OiEBGAAoAKgA3TFA0OFRkdV05TLmtleXOj
-	FhcYgAOABIAFoxobHIAGgAeACIAJWklkZW50aWZpZXJVV2lkdGhWSGlkZGVuUTAjQGjA
-	AAAAAAAI0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiJylYTlNP
-	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0B0oZ2yLQ5W0iUmNzhe
-	TlNNdXRhYmxlQXJyYXmjNzkpV05TQXJyYXkACAARABoAJAApADIANwBJAEwAUgBUAGMA
-	aQBuAHkAgACDAIUAhwCJAJAAmACcAJ4AoACiAKYAqACqAKwArgC5AL8AxgDIANEA0gDX
-	AOIA6wD4APsBBAELAQ8BEQETARUBGQEbAR0BHwEhASMBLAExAUABRAAAAAAAAAIBAAAA
-	AAAAADoAAAAAAAAAAAAAAAAAAAFM
-	</data>
-	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
-	<data>
-	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
-	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVVBcnJheYABowsMEVUkbnVsbNINDg8QWk5T
-	Lm9iamVjdHNWJGNsYXNzoIAC0hITFBVaJGNsYXNzbmFtZVgkY2xhc3Nlc15OU011dGFi
-	bGVBcnJheaMUFhdXTlNBcnJheVhOU09iamVjdAgRGiQpMjdJTFJUWF5jbnV2eH2IkaCk
-	rAAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
-	</data>
-	<key>NSTableView Supports v2 KeyBingingTable</key>
-	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>355 261 799 448 0 0 1440 900 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>-1162 1134 400 129 -1920 421 1920 1080 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 381 620 392 0 0 1440 900 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>-1651 594 606 469 -1920 468 1920 1057 </string>
-	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 877 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1669,850 +1602,6 @@
 			<string>/Users/nyalab</string>
 		</dict>
 	</array>
-	<key>NoSyncAllAppVersions</key>
-	<array>
-		<string>3.3.6</string>
-		<string>3.3.2</string>
-		<string>3.3.8</string>
-		<string>3.3.1</string>
-		<string>3.3.3</string>
-		<string>3.3.5</string>
-		<string>3.3.7</string>
-		<string>3.3.0</string>
-		<string>3.2.9</string>
-		<string>3.3.4</string>
-	</array>
-	<key>NoSyncBFPRecents</key>
-	<array>
-		<string>Cascadia Code</string>
-		<string>Fantasque Sans Mono</string>
-	</array>
-	<key>NoSyncFrame_SessionsPreferences</key>
-	<dict>
-		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
-		<key>topLeft</key>
-		<string>{269, 595}</string>
-	</dict>
-	<key>NoSyncFrame_SharedPreferences</key>
-	<dict>
-		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
-		<key>topLeft</key>
-		<string>{287, 867}</string>
-	</dict>
-	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
-	<true/>
-	<key>NoSyncInstallationId</key>
-	<string>79F1F7D2-FEE9-4881-AF75-ED1B7C7C8934</string>
-	<key>NoSyncLastTipTime</key>
-	<real>594035279.25421095</real>
-	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>64</integer>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
-	<key>NoSyncNextAnnoyanceTime</key>
-	<real>586425668.01094198</real>
-	<key>NoSyncOnboardingWindowHasBeenShown</key>
-	<true/>
-	<key>NoSyncPermissionToShowTip</key>
-	<true/>
-	<key>NoSyncRecordedVariables</key>
-	<dict>
-		<key>0</key>
-		<array>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string></string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-		</array>
-		<key>1</key>
-		<array>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>presentationName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxRole</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>lastCommand</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>profileName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>termid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>id</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>jobName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>columns</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tab.tmuxWindowTitle</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>hostname</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxClientName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>triggerName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>terminalIconName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindowPane</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxStatusRight</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>mouseReportingMode</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>iterm2</string>
-				<key>nonterminalContext</key>
-				<integer>4</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>name</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxPaneTitle</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>rows</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>username</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tty</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>autoLogId</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>badge</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tab.tmuxWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>tab</string>
-				<key>nonterminalContext</key>
-				<integer>2</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxStatusLeft</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>autoNameFormat</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>autoName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>terminalWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>creationTimeString</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>commandLine</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>jobPid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>pid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-		</array>
-		<key>16</key>
-		<array>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.presentationName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.iterm2.localhostName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>style</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>frame</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.pid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.terminalWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.terminalIconName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>currentTab</string>
-				<key>nonterminalContext</key>
-				<integer>2</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.window</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>id</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.name</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>titleOverride</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.commandLine</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>number</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.hostname</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.titleOverrideFormat</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.tty</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.username</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>iterm2</string>
-				<key>nonterminalContext</key>
-				<integer>4</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>titleOverrideFormat</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.jobName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-		</array>
-		<key>2</key>
-		<array>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.commandLine</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>title</string>
-				<key>nonterminalContext</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>title</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindowTitle</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.presentationName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>iterm2.localhostName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.jobPid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>window</string>
-				<key>nonterminalContext</key>
-				<integer>16</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.tty</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.jobName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.name</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>window</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>id</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>titleOverride</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.username</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>iterm2</string>
-				<key>nonterminalContext</key>
-				<integer>4</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>titleOverrideFormat</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.hostname</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.pid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindow</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-		</array>
-		<key>4</key>
-		<array>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>pid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>localhostName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>effectiveTheme</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-		</array>
-	</dict>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>error</string>
-	</array>
-	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>581507557.44502294</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>0009</string>
-		<string>0016</string>
-		<string>0023</string>
-		<string>0030</string>
-		<string>0059</string>
-		<string>0066</string>
-		<string>0073</string>
-		<string>0002</string>
-		<string>0038</string>
-		<string>0045</string>
-		<string>0052</string>
-		<string>0017</string>
-		<string>0024</string>
-		<string>0031</string>
-		<string>0067</string>
-		<string>0074</string>
-		<string>0003</string>
-		<string>0010</string>
-		<string>0039</string>
-		<string>0046</string>
-		<string>0053</string>
-		<string>0060</string>
-		<string>0018</string>
-		<string>0025</string>
-		<string>0032</string>
-		<string>0068</string>
-		<string>0004</string>
-		<string>0011</string>
-		<string>0047</string>
-		<string>0054</string>
-		<string>0061</string>
-		<string>0019</string>
-		<string>0026</string>
-		<string>0033</string>
-		<string>0040</string>
-		<string>0069</string>
-		<string>0076</string>
-		<string>0005</string>
-		<string>0012</string>
-		<string>0048</string>
-		<string>0055</string>
-		<string>0062</string>
-		<string>0027</string>
-		<string>0034</string>
-		<string>0041</string>
-		<string>0077</string>
-		<string>0006</string>
-		<string>0013</string>
-		<string>0020</string>
-		<string>0049</string>
-		<string>0056</string>
-		<string>0063</string>
-		<string>0070</string>
-		<string>0028</string>
-		<string>0035</string>
-		<string>0042</string>
-		<string>0007</string>
-		<string>0014</string>
-		<string>0021</string>
-		<string>0057</string>
-		<string>0064</string>
-		<string>0071</string>
-		<string>0000</string>
-		<string>0029</string>
-		<string>0036</string>
-		<string>0043</string>
-		<string>0050</string>
-		<string>0008</string>
-		<string>0015</string>
-		<string>0022</string>
-		<string>0058</string>
-		<string>0065</string>
-		<string>0072</string>
-		<string>0001</string>
-		<string>0037</string>
-		<string>000</string>
-		<string>0044</string>
-		<string>0051</string>
-		<string>0078</string>
-	</array>
 	<key>OpenArrangementAtStartup</key>
 	<true/>
 	<key>OpenBookmark</key>
@@ -2556,8 +1645,6 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>PrefsCustomFolder</key>
-	<string>/Users/nyalab/handles/modules/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -2587,20 +1674,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUFeedAlternateAppNameKey</key>
-	<string>iTerm</string>
-	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=72</string>
-	<key>SUHasLaunchedBefore</key>
-	<true/>
-	<key>SULastCheckTime</key>
-	<date>2020-02-04T09:40:00Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
-	<key>SUUpdateRelaunchingMarker</key>
-	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<true/>
 	<key>ShowBookmarkName</key>
@@ -2659,17 +1732,19 @@
 				<key>Is Hotkey Window</key>
 				<false/>
 				<key>Old Height</key>
-				<real>422</real>
+				<real>428</real>
 				<key>Old Width</key>
 				<real>400</real>
 				<key>Old X Origin</key>
-				<real>155</real>
+				<real>-1694</real>
 				<key>Old Y Origin</key>
-				<real>93</real>
+				<real>809</real>
 				<key>Saved Window Type</key>
 				<integer>13</integer>
 				<key>Screen</key>
 				<integer>0</integer>
+				<key>Scroller Width</key>
+				<real>0.0</real>
 				<key>Selected Tab Index</key>
 				<integer>0</integer>
 				<key>Tabs</key>
@@ -2677,11 +1752,13 @@
 					<dict>
 						<key>Root</key>
 						<dict>
+							<key>Splitter ID</key>
+							<string>5E29F76E-FBFF-4B2F-B7DF-A0896C4C6774</string>
 							<key>Subviews</key>
 							<array>
 								<dict>
 									<key>Is Active</key>
-									<integer>0</integer>
+									<integer>1</integer>
 									<key>Session</key>
 									<dict>
 										<key>Bookmark</key>
@@ -2942,7 +2019,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>15B403C0-387A-4F30-9D2A-365316AB9897</string>
+											<string>64B848E6-6950-4A27-A33E-49664FDC24E0</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -3408,7 +2485,7 @@
 											<string>next portal</string>
 										</dict>
 										<key>Columns</key>
-										<integer>101</integer>
+										<integer>92</integer>
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
@@ -3416,7 +2493,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/nyalab</string>
+											<string>/Users/nyalab/export/loungeup-static</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -3424,6 +2501,8 @@
 										<array/>
 										<key>Is UTF-8</key>
 										<true/>
+										<key>Key Labels</key>
+										<dict/>
 										<key>Name Controller State</key>
 										<dict>
 											<key>icon title stack</key>
@@ -3431,13 +2510,22 @@
 											<key>window title stack</key>
 											<array/>
 										</dict>
+										<key>Overridden Fields</key>
+										<array>
+											<string>Title Components</string>
+											<string>tmux Pane Title</string>
+											<string>Name</string>
+											<string>Original Guid</string>
+											<string>Guid</string>
+											<string>Show Status Bar</string>
+										</array>
 										<key>Program</key>
 										<dict>
 											<key>Type</key>
 											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>59</integer>
+										<integer>55</integer>
 										<key>Session GUID</key>
 										<string>F8BF81BC-F399-457C-BCFD-313322110461</string>
 										<key>Short Lived Single Use</key>
@@ -3449,7 +2537,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/export/next/projects/portal/client</string>
+										<string>/Users/nyalab/export/loungeup-static</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -3460,7 +2548,7 @@
 										<key>height</key>
 										<real>862</real>
 										<key>width</key>
-										<real>719.5</real>
+										<real>719</real>
 										<key>x</key>
 										<real>0.0</real>
 										<key>y</key>
@@ -3469,7 +2557,7 @@
 								</dict>
 								<dict>
 									<key>Is Active</key>
-									<integer>1</integer>
+									<integer>0</integer>
 									<key>Session</key>
 									<dict>
 										<key>Bookmark</key>
@@ -3730,7 +2818,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>63695D60-4D0E-4FEC-A0FF-D527AEA27F07</string>
+											<string>9F3D9494-F0A0-4030-848B-96D39F74ACAA</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -4251,7 +3339,7 @@
 											<string>next portal</string>
 										</dict>
 										<key>Columns</key>
-										<integer>101</integer>
+										<integer>92</integer>
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
@@ -4259,7 +3347,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/nyalab</string>
+											<string>/Users/nyalab/export/next/projects/portal</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -4267,6 +3355,8 @@
 										<array/>
 										<key>Is UTF-8</key>
 										<true/>
+										<key>Key Labels</key>
+										<dict/>
 										<key>Name Controller State</key>
 										<dict>
 											<key>icon title stack</key>
@@ -4274,15 +3364,22 @@
 											<key>window title stack</key>
 											<array/>
 										</dict>
+										<key>Overridden Fields</key>
+										<array>
+											<string>Status Bar Layout</string>
+											<string>tmux Pane Title</string>
+											<string>Name</string>
+											<string>Original Guid</string>
+											<string>Guid</string>
+											<string>Title Components</string>
+										</array>
 										<key>Program</key>
 										<dict>
-											<key>Command</key>
-											<string>login -fp "nyalab"</string>
 											<key>Type</key>
-											<string>Command</string>
+											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>58</integer>
+										<integer>53</integer>
 										<key>Session GUID</key>
 										<string>06524186-2BB9-4DA6-B763-4BE515790831</string>
 										<key>Short Lived Single Use</key>
@@ -4294,7 +3391,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/export/next</string>
+										<string>/Users/nyalab/export/next/projects/portal</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -4305,9 +3402,9 @@
 										<key>height</key>
 										<real>862</real>
 										<key>width</key>
-										<real>719.5</real>
+										<real>720</real>
 										<key>x</key>
-										<real>720.5</real>
+										<real>720</real>
 										<key>y</key>
 										<real>0.0</real>
 									</dict>
@@ -4329,12 +3426,16 @@
 							<key>isVertical</key>
 							<true/>
 						</dict>
+						<key>Tab GUID</key>
+						<string>6E5045ED-0F74-4FD1-AFC7-591F651F3A16</string>
 						<key>Title Override</key>
 						<string>next portal-client</string>
 					</dict>
 					<dict>
 						<key>Root</key>
 						<dict>
+							<key>Splitter ID</key>
+							<string>23FD2E80-6427-4EC8-8A7D-68DAD47FEA58</string>
 							<key>Subviews</key>
 							<array>
 								<dict>
@@ -4600,7 +3701,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>1473FEFD-81B8-44D4-8AB4-1AAD70F7B134</string>
+											<string>0F530091-CC80-414B-A60F-3BA5FAC6EC1E</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -5066,7 +4167,7 @@
 											<string>next portal</string>
 										</dict>
 										<key>Columns</key>
-										<integer>204</integer>
+										<integer>195</integer>
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
@@ -5074,7 +4175,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/nyalab</string>
+											<string>/Users/nyalab/export/next</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -5082,6 +4183,8 @@
 										<array/>
 										<key>Is UTF-8</key>
 										<true/>
+										<key>Key Labels</key>
+										<dict/>
 										<key>Name Controller State</key>
 										<dict>
 											<key>icon title stack</key>
@@ -5089,15 +4192,21 @@
 											<key>window title stack</key>
 											<array/>
 										</dict>
+										<key>Overridden Fields</key>
+										<array>
+											<string>tmux Pane Title</string>
+											<string>Name</string>
+											<string>Original Guid</string>
+											<string>Guid</string>
+											<string>Title Components</string>
+										</array>
 										<key>Program</key>
 										<dict>
-											<key>Command</key>
-											<string>login -fp "nyalab"</string>
 											<key>Type</key>
-											<string>Command</string>
+											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>59</integer>
+										<integer>55</integer>
 										<key>Session GUID</key>
 										<string>BACA84BB-22B1-4892-85CB-2156302094E1</string>
 										<key>Short Lived Single Use</key>
@@ -5144,10 +4253,14 @@
 							<key>isVertical</key>
 							<false/>
 						</dict>
+						<key>Tab GUID</key>
+						<string>36C0AADB-EE1B-4BBB-A03B-BE0BCB5329BF</string>
 					</dict>
 					<dict>
 						<key>Root</key>
 						<dict>
+							<key>Splitter ID</key>
+							<string>E201DC6B-F7B7-47C2-B6FE-E9323462BE01</string>
 							<key>Subviews</key>
 							<array>
 								<dict>
@@ -5413,7 +4526,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>780FDF55-BDAA-4DAA-A808-33DCD67AD9AC</string>
+											<string>6B5205FA-390C-47B9-9C19-56BE19FC997B</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -5879,7 +4992,7 @@
 											<string>Default</string>
 										</dict>
 										<key>Columns</key>
-										<integer>204</integer>
+										<integer>195</integer>
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
@@ -5895,6 +5008,8 @@
 										<array/>
 										<key>Is UTF-8</key>
 										<true/>
+										<key>Key Labels</key>
+										<dict/>
 										<key>Name Controller State</key>
 										<dict>
 											<key>icon title stack</key>
@@ -5902,15 +5017,20 @@
 											<key>window title stack</key>
 											<array/>
 										</dict>
+										<key>Overridden Fields</key>
+										<array>
+											<string>tmux Pane Title</string>
+											<string>Original Guid</string>
+											<string>Guid</string>
+											<string>Title Components</string>
+										</array>
 										<key>Program</key>
 										<dict>
-											<key>Command</key>
-											<string>login -fp "nyalab"</string>
 											<key>Type</key>
-											<string>Command</string>
+											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>59</integer>
+										<integer>55</integer>
 										<key>Session GUID</key>
 										<string>43DC1645-4F03-4208-8A62-AED809659909</string>
 										<key>Short Lived Single Use</key>
@@ -5957,6 +5077,8 @@
 							<key>isVertical</key>
 							<false/>
 						</dict>
+						<key>Tab GUID</key>
+						<string>F73EFD36-E5C9-463D-A0D0-A4CBF1773660</string>
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
@@ -6005,8 +5127,6 @@
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
-	<key>iTerm Version</key>
-	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

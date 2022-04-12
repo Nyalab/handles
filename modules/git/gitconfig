@@ -5,6 +5,9 @@
 [github]
   user = Nyalab
 
+[branch]
+  sort = -committerdate
+
 [fetch]
   prune = true
 
@@ -13,6 +16,12 @@
 
 [push]
 	default = current
+
+[rebase]
+  autosquash = true
+
+[merge]
+  conflictStyle = zdiff3
 
 [diff]
   compactionHeuristic = true
@@ -33,6 +42,8 @@
   rockstarsyncwithremote = "!git fetch -p && for branch in git branch -vv | grep ': gone ]' | gawk '{print $1}'; do git branch -D $branch; done"
   please = push --force-with-lease
   slavery = "!git branch | grep -v "master" | xargs git branch -D"
+  fixup = "!sh -c 'git commit --fixup HEAD && git rebase -i --autosquash HEAD~1'"
+  aap = !git add . && git amend && git please
 
 [core]
   editor = vim

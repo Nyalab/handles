@@ -61,7 +61,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 # prompt
-PS1_EMOJIS=("😀" "😁" "😂" "🤣" "😃" "😄" "😅" "😆" "😉" "😊" "😋" "😎" "😍" "😘" "🥰" "😗" "😙" "😚" "☺️" "🙂" "🤗" "🤩" "🤔" "🤨" "😐" "😑" "😶" "🙄" "😏" "😣" "😥" "😮" "🤐" "😯" "😪" "😫" "😴" "😌" "😛" "😜" "😝" "🤤" "😒" "😓" "😔" "😕" "🙃" "🤑" "😲" "☹️" "🙁" "😖" "😞" "😟" "😤" "😢" "😭" "😦" "😧" "😨" "😩" "🤯" "😬" "😰" "😱" "🥵" "🥶" "😳" "🤪" "😵" "😡" "😠" "🤬" "😷" "🤒" "🤕" "🤢" "🤮" "🤧" "😇" "🤠" "🤡" "🥳" "🥴" "🥺" "🤥" "🤫" "🤭" "🧐" "🤓" "😈" "👿" "👹" "👺" "💀" "👻" "👽" "🤖" "💩")
+PS1_EMOJIS=(💩 🐦 🚀 🐞 🎨 🍕 🐭 👽 ☕️ 🔬 💀 🐷 🐼 🐶 🐸 🐧 🐳 🍔 🍣 🍻 🔮 💰 💎 💾 💜 🍪 🌞 🌍 🐌 🐓 🍄)
 NUMBER_OF_EMOJIS=${#PS1_EMOJIS[@]}
 
 setopt PROMPT_SUBST
@@ -76,7 +76,7 @@ prompt_user() {
 prompt_dir() {
   # colors for the prompt at https://framagit.org/mpo/dotfiles/blob/0fbc8e070793f060b90690fb99d526e8f94fd8ad/zsh/.zsh-color-names
   # part of shrink path stolen from https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/shrink-path/shrink-path.plugin.zsh
-  echo -n "%F{green}"
+  echo -n "%F{blue}"
   echo -n $(pwd | perl -pe "
    BEGIN {
       binmode STDIN,  ':encoding(UTF-8)';
@@ -86,21 +86,33 @@ prompt_dir() {
   echo -n " %f"
 }
 prompt_git() {
-  local repo git_status ref
+  local repo st stash ref
   # repo=$(git rev-parse --git-dir 2>/dev/null)
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git show-ref --head -s --abbrev |head -n1 2> /dev/null)
-    echo -n "%F{magenta}⤞ ${ref/refs\/heads\//}"
-    git_status=$(git status --porcelain 2> /dev/null | tail -n1)
-    if [[ -n $git_status ]]; then
-      echo -n "*"
+    echo -n "%F{magenta}"
+
+    # is the repop dirty?
+    st=$(git status --porcelain 2> /dev/null | tail -n1)
+    if [[ -n $st ]]; then
+      echo -n "* "
     fi
+
+    # does the repo has git stash?
+    stash=$(git rev-list --walk-reflogs --count refs/stash 2> /dev/null)
+    if [[ -n $stash ]]; then
+      echo -n "≡$stash "
+    fi
+
+    # branch name
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git show-ref --head -s --abbrev |head -n1 2> /dev/null)
+    echo -n "${ref/refs\/heads\//}"
+
     echo -n " %f"
   fi
 }
 PROMPT='
-%{%f%b%k%}$(prompt_status)${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS]} $(prompt_user)$(prompt_dir)$(prompt_git)\$ '
-RPROMPT='%*'
+%{%f%b%k%}$(prompt_status)${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS]} $(prompt_user)$(prompt_dir)\$ '
+RPROMPT='$(prompt_git)'
 
 # utils
 ## https://github.com/wting/autojump
@@ -136,14 +148,23 @@ if [[ -f $HOME/.github_token ]]; then
 fi
 
 # include other zshrc
-source "${0:A:h}/../docker/docker.zsh" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
+source "$(dirname ${0:A:h})/docker/docker.zsh" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
 
 # fancy
+alias ezs='vim ~/.zshrc'
 alias szs='source ~/.zshrc'
 alias h='history -iD'
 alias fuck='sudo $(history -p \!\!)'
 alias git=hub
+alias v=vim
+alias k=kubectl
+alias kstud='kubectl config set-context --current --namespace=studio'
+alias kprod='kubectl config set-context --current --namespace=production'
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true

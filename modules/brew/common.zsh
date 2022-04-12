@@ -9,3 +9,5 @@ brew cask install numi
 brew cask install notion
 brew cask install spotify
 brew cask install caprine
+brew cask install raycast # spotlight replacement
+brew cask install airbuddy # handle bluetooth devices

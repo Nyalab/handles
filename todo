@@ -23,3 +23,6 @@ check remote status in async in prompt
 SSH handling in prompt: https://github.com/andrepolischuk/neat/blob/master/neat.zsh#L27-L35
 see if i can borrow things from: https://github.com/denysdovhan/spaceship-prompt
 add reeder to mas
+add co author alias to git
+add pingr
+clean zsh with https://apple.stackexchange.com/questions/388622/zsh-zprofile-zshrc-zlogin-what-goes-where
