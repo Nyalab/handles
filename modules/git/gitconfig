@@ -8,6 +8,9 @@
 [branch]
   sort = -committerdate
 
+[tag]
+  sort = -committerdate
+
 [fetch]
   prune = true
 
@@ -35,6 +38,7 @@
   co = checkout
   sw = switch
   rs = restore
+  b = branch
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   spp = !git stash clear && git stash && git pull --rebase && git stash pop
   ctags = !.git/hooks/ctags
@@ -47,8 +51,12 @@
 
 [core]
   editor = vim
-  pager = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
+  # pager = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
+  pager = diff-so-fancy | less --tabs=4 -RFX
   excludesfile = ~/handles/modules/git/gitignore_global
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
 
 [color]
   ui = true
@@ -56,11 +64,19 @@
   current = yellow reverse
   local = yellow
   remote = green
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 52
 [color "diff"]
-  meta = yellow bold
+  meta = 11
   frag = magenta bold
+  func = 146 bold
+  commit = yellow bold
   old = red bold
   new = green bold
+  whitespace = red reverse
 [color "status"]
   added = yellow
   changed = green

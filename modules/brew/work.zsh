@@ -6,6 +6,10 @@ brew install pnpm
 brew install autojump # easy `j` command for dir jumping
 brew install bat # better cat
 brew install exa # better ls
+brew install thefuck # correct and rerun last command
+brew install croc # share file through cli
+brew install btop # monitor computer ressources
+brew install httpie # better curl
 
 brew cask install visual-studio-code
 brew cask install insomnia # for testing apis

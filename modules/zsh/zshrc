@@ -165,6 +165,8 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`"
 
+eval "$(thefuck --alias)"
+
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
