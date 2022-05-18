@@ -14,3 +14,4 @@ brew install zsh-completions
 # brew install zsh-syntax-highlighting
 
 ln -sfn $HANDLES_PATH/modules/zsh/zshrc $HOME/.zshrc
+ln -sfn $HANDLES_PATH/modules/zsh/zprofile $HOME/.zprofile
