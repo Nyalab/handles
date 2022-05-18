@@ -3,5 +3,10 @@
 . $HANDLES_PATH/src/helpers.sh
 
 if ! type "brew" >/dev/null; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+brew update
+
+brew tap homebrew/cask
+

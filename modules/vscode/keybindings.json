@@ -1,0 +1,20 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+[BracketRight]",
+        "command": "editor.action.inlineSuggest.showNext"
+    },
+    {
+        "key": "alt+[BracketLeft]",
+        "command": "editor.action.inlineSuggest.showPrevious"
+    },
+    {
+        "key": "alt+[Period]",
+        "command": "editor.action.inlineSuggest.trigger"
+    },
+    {
+        "key": "shift+enter",
+        "command": "extension.jumpy-word",
+        "when": "editorTextFocus"
+    }
+]

@@ -148,6 +148,7 @@ if [[ -f $HOME/.github_token ]]; then
 fi
 
 # include other zshrc
+# . $(cd "$(dirname "$0")"; pwd)/../modules/docker/docker.zsh
 source "$(dirname ${0:A:h})/docker/docker.zsh" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
 
 # fancy
@@ -163,7 +164,7 @@ alias kprod='kubectl config set-context --current --namespace=production'
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`"
+export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`:$HOME/.cargo/bin"
 
 eval "$(thefuck --alias)"
 

@@ -26,3 +26,4 @@ add reeder to mas
 add co author alias to git
 add pingr
 clean zsh with https://apple.stackexchange.com/questions/388622/zsh-zprofile-zshrc-zlogin-what-goes-where
+fill defaults https://github.com/zellwk/dotfiles/blob/master/mac/macos
