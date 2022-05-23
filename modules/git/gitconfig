@@ -48,6 +48,7 @@
   slavery = "!git branch | grep -v "master" | xargs git branch -D"
   fixup = "!sh -c 'git commit --fixup HEAD && git rebase -i --autosquash HEAD~1'"
   aap = !git add . && git amend && git please
+  nuke = !sh -c 'git branch -D $1 && git push origin :$1' -
 
 [core]
   editor = vim
