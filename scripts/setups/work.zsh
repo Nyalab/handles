@@ -2,6 +2,8 @@
 
 . $HANDLES_PATH/src/helpers.sh
 
+$HANDLES_PATH/modules/ssh/install.zsh
+
 $HANDLES_PATH/modules/brew/common.zsh
 $HANDLES_PATH/modules/brew/work.zsh
 

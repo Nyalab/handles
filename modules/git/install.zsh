@@ -3,18 +3,19 @@
 . $HANDLES_PATH/src/helpers.sh
 
 brew install git
-brew install hub
+brew install gh
+brew install diff-so-fancy
 
 ln -sf $HANDLES_PATH/modules/git/gitconfig $HOME/.gitconfig
 
-echo "Creating a GitHub token:"
-echo "  Login to GitHub to get a token & paste it (ENTER to skip)"
-open "https://github.com/settings/tokens/new"
-echo -n "🤖 “The message is a request for information” > "
-read gh_token
-if [ "$gh_token" != "" ]; then
-  echo $gh_token | tee $HOME/.github_token
-fi
+# echo "Creating a GitHub token:"
+# echo "  Login to GitHub to get a token & paste it (ENTER to skip)"
+# open "https://github.com/settings/tokens/new"
+# echo -n "🤖 “The message is a request for information” > "
+# read gh_token
+# if [ "$gh_token" != "" ]; then
+#   echo $gh_token | tee $HOME/.github_token
+# fi
 
 # display a barchart for most touched files
 # https://github.com/jez/git-heatmap
@@ -26,4 +27,4 @@ brew install jez/formulae/git-heatmap
 npm install -g git-standup
 
 # macOS notifications
-brew cask install gitpigeon
+brew install --cask gitpigeon

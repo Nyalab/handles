@@ -12,3 +12,7 @@ trim_trailing_whitespace = true
 # Allow <br/> from Markdown
 trim_trailing_whitespace = false
 indent_size = 4
+
+[*.zsh]
+indent_style = tab
+indent_size = 2

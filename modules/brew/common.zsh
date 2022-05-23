@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 brew install --cask authy # 2fa
-brew install --cask dashlane # passwords
 brew install --cask numi # perfect calculator
 brew install --cask notion # note taking app
 brew install --cask spotify # music

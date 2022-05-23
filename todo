@@ -28,3 +28,6 @@ add pingr
 clean zsh with https://apple.stackexchange.com/questions/388622/zsh-zprofile-zshrc-zlogin-what-goes-where
 fill defaults https://github.com/zellwk/dotfiles/blob/master/mac/macos
 make rust install by defaut non interactive
+use https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+see how to not have mail directly in source code
+see if passphrases are useful

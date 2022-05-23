@@ -156,7 +156,6 @@ alias ezs='vim ~/.zshrc'
 alias szs='source ~/.zshrc'
 alias h='history -iD'
 alias fuck='sudo $(history -p \!\!)'
-alias git=hub
 alias v=vim
 alias k=kubectl
 alias kstud='kubectl config set-context --current --namespace=studio'

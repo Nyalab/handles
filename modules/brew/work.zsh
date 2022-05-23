@@ -11,7 +11,9 @@ brew install croc # share file through cli
 brew install btop # monitor computer ressources
 brew install httpie # better curl
 brew install rustup # rust
-rustup-init
+if ! type "rustup" >/dev/null; then
+    rustup-init
+fi
 
 brew install --cask visual-studio-code
 brew install --cask insomnia # for testing apis

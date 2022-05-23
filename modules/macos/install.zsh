@@ -15,6 +15,7 @@ mas install 1448916662 #Step Two
 mas install 1611378436 #Pure Paste
 mas install 1575588022 #MenuBarX
 mas install 1607635845 #Velja
+mas install 517914548 #Dashlane
 
 # set computer name
 sudo scutil --set ComputerName "Nyalab's Macbook"
@@ -44,7 +45,7 @@ defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 # save panel expanding by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -80,13 +81,12 @@ defaults write -globalDomain NSAutomaticPeriodSubstitutionEnabled -int 0
 defaults write -globalDomain NSAutomaticSpellingCorrectionEnabled -int 0
 
 ### DOCK
-# auto hide the dock
-defaults write com.apple.dock autohide 1
-# remove the auto hiding delay
+# auto hide, short animation duration, no delay
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-time-modifier -float 0.25
 defaults write com.apple.dock autohide-delay -float 0
-
 # icon size
-defaults write com.apple.dock tilesize 40
+defaults write com.apple.dock tilesize -int 36
 # don't switch to the most recent used space (keep order)
 defaults write com.apple.dock mru-spaces -bool false
 # remove dock items
@@ -103,17 +103,20 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
 # context menu on web views for web inspector
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+### SCREENSHOTS
+# create directory and assign it
+mkdir -p ~/screenshots
+defaults write com.apple.screencapture location -string "~/screenshots"
+# show thumbnail after screenshot
+defaults write com.apple.screencapture show-thumbnail -bool true
 
 ### OTHER
 # show main view when opening activity monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-# set screenshots directory
-mkdir ~/screenshots
-defaults write com.apple.screencapture location ~/screenshots
 
 #restart all aps
 for app in "Activity Monitor" \
