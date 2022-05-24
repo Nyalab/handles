@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-brew cask install docker
+brew install --cask docker
 npm install -g dockly
 
 brew install dive

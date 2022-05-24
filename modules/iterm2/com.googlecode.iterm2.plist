@@ -1736,9 +1736,9 @@
 				<key>Old Width</key>
 				<real>400</real>
 				<key>Old X Origin</key>
-				<real>-1694</real>
+				<real>155</real>
 				<key>Old Y Origin</key>
-				<real>809</real>
+				<real>93</real>
 				<key>Saved Window Type</key>
 				<integer>13</integer>
 				<key>Screen</key>
@@ -1758,7 +1758,7 @@
 							<array>
 								<dict>
 									<key>Is Active</key>
-									<integer>1</integer>
+									<integer>0</integer>
 									<key>Session</key>
 									<dict>
 										<key>Bookmark</key>
@@ -1766,6 +1766,8 @@
 											<key>ASCII Anti Aliased</key>
 											<true/>
 											<key>ASCII Ligatures</key>
+											<false/>
+											<key>Allow Title Setting</key>
 											<false/>
 											<key>Ambiguous Double Width</key>
 											<false/>
@@ -2019,7 +2021,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>64B848E6-6950-4A27-A33E-49664FDC24E0</string>
+											<string>84C37A29-9B46-4CAC-8F42-F418D639ECB5</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -2334,7 +2336,7 @@
 											<key>Mouse Reporting</key>
 											<true/>
 											<key>Name</key>
-											<string>next portal-client webpack</string>
+											<string>next portal dev-server</string>
 											<key>Non Ascii Font</key>
 											<string>Monaco 12</string>
 											<key>Non-ASCII Anti Aliased</key>
@@ -2482,7 +2484,7 @@
 											<key>Working Directory</key>
 											<string>/Users/nyalab</string>
 											<key>tmux Pane Title</key>
-											<string>next portal</string>
+											<string>next portal dev-server</string>
 										</dict>
 										<key>Columns</key>
 										<integer>92</integer>
@@ -2515,6 +2517,7 @@
 											<string>Title Components</string>
 											<string>tmux Pane Title</string>
 											<string>Name</string>
+											<string>Allow Title Setting</string>
 											<string>Original Guid</string>
 											<string>Guid</string>
 											<string>Show Status Bar</string>
@@ -2537,7 +2540,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/export/loungeup-static</string>
+										<string>/Users/nyalab/dev/next/projects/portal</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -2557,7 +2560,7 @@
 								</dict>
 								<dict>
 									<key>Is Active</key>
-									<integer>0</integer>
+									<integer>1</integer>
 									<key>Session</key>
 									<dict>
 										<key>Bookmark</key>
@@ -2565,6 +2568,8 @@
 											<key>ASCII Anti Aliased</key>
 											<true/>
 											<key>ASCII Ligatures</key>
+											<false/>
+											<key>Allow Title Setting</key>
 											<false/>
 											<key>Ambiguous Double Width</key>
 											<false/>
@@ -2818,7 +2823,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>9F3D9494-F0A0-4030-848B-96D39F74ACAA</string>
+											<string>8D4D61ED-01F0-450D-AFA1-F3FD6AD7056D</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -3133,7 +3138,7 @@
 											<key>Mouse Reporting</key>
 											<true/>
 											<key>Name</key>
-											<string>next portal-client</string>
+											<string>next portal</string>
 											<key>Non Ascii Font</key>
 											<string>Monaco 12</string>
 											<key>Non-ASCII Anti Aliased</key>
@@ -3369,6 +3374,7 @@
 											<string>Status Bar Layout</string>
 											<string>tmux Pane Title</string>
 											<string>Name</string>
+											<string>Allow Title Setting</string>
 											<string>Original Guid</string>
 											<string>Guid</string>
 											<string>Title Components</string>
@@ -3391,7 +3397,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/export/next/projects/portal</string>
+										<string>/</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -3701,7 +3707,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>0F530091-CC80-414B-A60F-3BA5FAC6EC1E</string>
+											<string>D3C2486F-1B40-414B-80F9-3214A3D8FD9D</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -4218,7 +4224,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/export/next</string>
+										<string>/Users/nyalab/dev/next</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -4526,7 +4532,7 @@
 												<real>0.75294117647058822</real>
 											</dict>
 											<key>Guid</key>
-											<string>6B5205FA-390C-47B9-9C19-56BE19FC997B</string>
+											<string>C36F62F6-6D00-4879-B176-20F955FB1777</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>

@@ -37,4 +37,7 @@ else
 
 	echo "opening github so we paste the key"
 	open https://github.com/settings/ssh/new
+
+	echo "opening gitlab so we paste the key"
+	open https://gitlab.com/-/profile/keys
 fi

@@ -12,7 +12,6 @@ mas install 1470584107 #Dato
 mas install 957810159 #Raindrop.io for Safari
 mas install 1480882940 #Aerate
 mas install 1448916662 #Step Two
-mas install 1611378436 #Pure Paste
 mas install 1575588022 #MenuBarX
 mas install 1607635845 #Velja
 mas install 517914548 #Dashlane
