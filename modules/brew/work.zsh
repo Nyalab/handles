@@ -3,6 +3,12 @@
 brew install node
 brew install yarn
 brew install pnpm
+brew install n
+sudo mkdir -p /usr/local/n
+sudo chown -R $(whoami) /usr/local/n
+sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+
 brew install autojump # easy `j` command for dir jumping
 brew install bat # better cat
 brew install exa # better ls
@@ -14,6 +20,7 @@ brew install rustup # rust
 if ! type "rustup" >/dev/null; then
     rustup-init
 fi
+brew install ansible
 
 brew install --cask visual-studio-code
 brew install --cask insomnia # for testing apis

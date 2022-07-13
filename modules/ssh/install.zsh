@@ -26,7 +26,7 @@ else
 		# only use if passphrase
 		# echo -e "\tUseKeychain yes"
 		echo -e "\tIdentityFile ~/.ssh/id_ed25519"
-	} > test.txt
+	} > ~/.ssh/config
 
 	echo "adding ssh key to ssh-agent"
 	# add -K if passphrase
