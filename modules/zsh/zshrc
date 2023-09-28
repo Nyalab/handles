@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # directories options
 setopt AUTO_CD
 setopt AUTO_PUSHD
@@ -160,13 +162,25 @@ alias v=vim
 alias k=kubectl
 alias kstud='kubectl config set-context --current --namespace=studio'
 alias kprod='kubectl config set-context --current --namespace=production'
+alias top='btop'
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`:$HOME/.cargo/bin"
+export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`:$HOME/.cargo/bin:/opt/homebrew/opt/python@3.10/libexec/bin"
 
 eval "$(thefuck --alias)"
 
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+alias pn=pnpm
+# pnpm
+export PNPM_HOME="/Users/nyalab/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+export OPENAI_API_KEY="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"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

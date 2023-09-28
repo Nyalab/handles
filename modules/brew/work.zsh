@@ -30,11 +30,12 @@ brew install --cask sizzy
 brew install --cask figma
 brew install --cask kap # screen recorder
 brew install --cask zeplin
+brew install --cask fig
 
-brew install --cask firefox
 brew install --cask homebrew/cask-versions/firefox-developer-edition
 brew install --cask google-chrome
 brew install --cask safari-technology-preview
+brew install --cask arc
 
 brew install --cask discord
 brew install --cask slack

@@ -5,16 +5,14 @@ osascript -e 'tell application "System Preferences" to quit'
 
 brew install mas
 
-# mas signin --dialog
-mas install 992076693 #MindNode
+mas signin --dialog
+# mas install 992076693 #MindNode
 mas install 409183694 #Keynote
 mas install 1470584107 #Dato
 mas install 957810159 #Raindrop.io for Safari
-mas install 1480882940 #Aerate
-mas install 1448916662 #Step Two
+# mas install 1480882940 #Aerate
 mas install 1575588022 #MenuBarX
 mas install 1607635845 #Velja
-mas install 517914548 #Dashlane
 
 # set computer name
 sudo scutil --set ComputerName "Nyalab's Macbook"
