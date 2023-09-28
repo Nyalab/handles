@@ -28,3 +28,5 @@ npm install -g git-standup
 
 # macOS notifications
 brew install --cask gitpigeon
+
+echo "THINK ABOUT INSTALLING GITLIGHT"
