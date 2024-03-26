@@ -1,6 +1,6 @@
 [user]
 	name = Sébastien Balayn
-	email = sebastien@loungeup.com
+	email = sebastien.balayn@shotgun.live
 
 [github]
   user = Nyalab
@@ -32,8 +32,8 @@
 
 [alias]
   aliases = config --get-regexp ^alias\\.
-  s = status
-  st = status -sb
+  s = status -sb
+  st = status
   c = commit
   amend = !git commit --amend --no-edit --date=\"$(date +%s)\"
   co = checkout
@@ -43,8 +43,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   spp = !git stash clear && git stash && git pull --rebase && git stash pop
   ctags = !.git/hooks/ctags
-  cleanup = "!git branch --merged | grep  -v '\\*\\|master' | xargs -n 1 git branch -d"
-  rockstarsyncwithremote = "!git fetch -p && for branch in git branch -vv | grep ': gone ]' | gawk '{print $1}'; do git branch -D $branch; done"
+  cleanup = "!git fetch -p && for branch in git branch -vv | grep ': gone ]' | grep -v '\\*' | gawk '{print $1}'; do git branch -D $branch; done"
   please = push --force-with-lease
   slavery = "!git branch | grep -v "master" | xargs git branch -D"
   fixup = "!sh -c 'git commit --fixup HEAD && git rebase -i --autosquash HEAD~1'"
@@ -84,9 +83,13 @@
   changed = green
   untracked = cyan
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 
 [rerere]
   enable = true
+
+[includeIf "gitdir:~/dev/pro/"]
+  path = .gitconfig-pro

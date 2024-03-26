@@ -1,0 +1,12 @@
+export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
+
+alias bb="cd ~/dev/shotgun/b2b && n auto"
+alias bc="cd ~/dev/shotgun/b2c && n auto"
+alias ds="cd ~/dev/shotgun/b2c/packages/b2c-design-system && n auto"
+alias app="cd ~/dev/shotgun/b2c/packages/b2c-app && n auto"
+alias web="cd ~/dev/shotgun/b2c/packages/b2c-web && n auto"
+alias api="cd ~/dev/shotgun/b2c/packages/b2c-api && n auto"
+alias sbf="cd ~/dev/shotgun/b2b/packages/smartboard-frontend && n auto"
+alias sbb="cd ~/dev/shotgun/b2b/packages/smartboard-backend && n auto"
+alias fa="cd ~/dev/shotgun/forestadmin-backend && n auto"
+alias pt="cd ~/dev/shotgun/promoters && n auto"

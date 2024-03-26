@@ -15,10 +15,10 @@ mas install 1575588022 #MenuBarX
 mas install 1607635845 #Velja
 
 # set computer name
-sudo scutil --set ComputerName "Nyalab's Macbook"
-sudo scutil --set HostName "Nyalab's Macbook"
-sudo scutil --set LocalHostName "nyalab-macbook"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Nyalab's Macbook"
+sudo scutil --set ComputerName "example-mac"
+sudo scutil --set HostName "example-mac"
+sudo scutil --set LocalHostName "example-mac"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "example-mac"
 
 ### FINDER
 # show hidden files in finder
