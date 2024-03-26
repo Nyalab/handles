@@ -24,13 +24,13 @@ else
 		echo -e "Host *"
 		echo -e "\tAddKeysToAgent yes"
 		# only use if passphrase
-		# echo -e "\tUseKeychain yes"
+		echo -e "\tUseKeychain yes"
 		echo -e "\tIdentityFile ~/.ssh/id_ed25519"
 	} > ~/.ssh/config
 
 	echo "adding ssh key to ssh-agent"
 	# add -K if passphrase
-	ssh-add ~/.ssh/id_ed25519
+	ssh-add -K ~/.ssh/id_ed25519
 
 	echo "copying ssh key to clipboard"
 	pbcopy < ~/.ssh/id_ed25519.pub

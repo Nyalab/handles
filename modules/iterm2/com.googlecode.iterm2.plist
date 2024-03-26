@@ -2540,7 +2540,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/dev/next/projects/portal</string>
+										<string>/Users/nyalab</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -3397,7 +3397,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/dev/next/projects/portal</string>
+										<string>/Users/nyalab</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -4224,7 +4224,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nyalab/dev/next</string>
+										<string>/Users/nyalab</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>

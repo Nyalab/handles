@@ -182,5 +182,8 @@ export PATH="$PNPM_HOME:$PATH"
 
 export OPENAI_API_KEY="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"
 
+# todo better
+source "$(dirname ${0:A:h:h})/scripts/setups/shotgun/zshrc" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
