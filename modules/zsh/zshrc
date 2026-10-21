@@ -1,139 +1,125 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-# directories options
+# sourced by ~/.zshrc, see modules/zsh/install.sh
+
+# directories
 setopt AUTO_CD
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
-setopt PUSHD_TO_HOME
+# setopt PUSHD_TO_HOME
 
 # history
 HISTSIZE=9999
+SAVEHIST=9999
 setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_DUPS
+# setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
-setopt HIST_SAVE_NO_DUPS
+# setopt HIST_SAVE_NO_DUPS
 setopt INC_APPEND_HISTORY
 
-# I/O
-unsetopt CLOBBER # so we can '>' to truncate existing file
+# I/O and globbing
+unsetopt CLOBBER # '>' refuses to overwrite an existing file, use '>|' to force
+# setopt EXTENDED_GLOB
+# setopt MULTIOS # already the zsh default
 
-# globbing
-setopt EXTENDED_GLOB
+# keybindings
+bindkey -e # emacs-style editing (zsh would switch to vi mode if EDITOR contains "vi")
+bindkey "^[^[[D" backward-word # alt-left
+bindkey "^[^[[C" forward-word # alt-right
+# bindkey "^[^?" backward-kill-word # alt-backspace, already the emacs mode default
+bindkey "^[[3~" delete-char # delete
+# bindkey "^[3;5~" delete-char # ctrl-delete, obscure terminal code
 
-# scripts
-setopt MULTIOS # so we can: `$ echo 'foo' > file1 > file2`
-
-# zle
-bindkey -e
-bindkey "^[^[[D" backward-word         # alt-left
-bindkey "^[^[[C" forward-word          # alt-right
-bindkey "^[^?" backward-kill-word      # alt-backspace
-bindkey "^[[3~" delete-char            # delete
-bindkey "^[3;5~" delete-char           # delete
-
-# aliases
+# aliases: viewing and listing
 alias cat="bat"
 alias grep="grep --color=auto"
 alias less="less -R"
-# alias ls="ls -HFG"
-# alias ll="ls -lh"
-# alias la="ll -A"
-# alias sl="ls"
-alias l="exa -a1" # short for "1"line "A"ll
-alias ls="exa -F" # with suffixes (/ for dirs, ect.)
-alias sl="exa -F" # for typos
-alias ll="exa -lF --git" # full
-alias la="exa -alF --git" # full with hidden files
-alias lt="exa -a --tree" # tree
-alias lt1="exa -a --tree -L1" # tree level 1
-alias lt2="exa -a --tree -L2" # tree level 2
-alias llt="exa -a --tree" # long tree
-alias llt1="exa -a --tree -L1" # long tree level 1
-alias llt2="exa -a --tree -L2" # long tree level 2
-alias lr="exa -R" # recurse
+alias top="btop"
+alias df="df -h"
+# alias man="LC_ALL=C LANG=C man"
+alias ls="eza -F" # with suffixes (/ for dirs, etc.)
+# alias sl="eza -F" # for typos
+alias l="eza -a1" # one per line, with hidden files
+alias ll="eza -lF --git" # detailed
+alias la="eza -alF --git" # detailed with hidden files
+alias lt="eza -a --tree" # tree
+alias lt1="eza -a --tree -L1" # tree level 1
+alias lt2="eza -a --tree -L2" # tree level 2
+# alias llt="eza -a --tree" # duplicate of lt
+# alias llt1="eza -a --tree -L1" # duplicate of lt1
+# alias llt2="eza -a --tree -L2" # duplicate of lt2
+alias lr="eza -R" # recurse
 
-alias df="df -kh"
-alias man="LC_ALL=C LANG=C man"
-
-# safe
+# aliases: safety, ask before overwriting or deleting
 alias cp="cp -i"
 alias ln="ln -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
-# prompt
-PS1_EMOJIS=(💩 🐦 🚀 🐞 🎨 🍕 🐭 👽 ☕️ 🔬 💀 🐷 🐼 🐶 🐸 🐧 🐳 🍔 🍣 🍻 🔮 💰 💎 💾 💜 🍪 🌞 🌍 🐌 🐓 🍄)
-NUMBER_OF_EMOJIS=${#PS1_EMOJIS[@]}
+# aliases: misc
+alias ezs="vim ${0:A}" # edit this file ($0:A is its absolute path, symlinks resolved)
+alias szs='source ~/.zshrc'
+alias h='history -iD' # history with dates and durations
+alias v=vim
+alias pn=pnpm
+# alias fuck='sudo $(history -p \!\!)'
+# alias k=kubectl
+# alias kstud='kubectl config set-context --current --namespace=studio'
+# alias kprod='kubectl config set-context --current --namespace=production'
 
-setopt PROMPT_SUBST
+# prompt
+prompt_emojis=(💩 🐦 🚀 🐞 🎨 🍕 🐭 👽 ☕️ 🔬 💀 🐷 🐼 🐶 🐸 🐧 🐳 🍔 🍣 🍻 🔮 💰 💎 💾 💜 🍪 🌞 🌍 🐌 🐓 🍄)
+
+setopt PROMPT_SUBST # re-run the functions below each time the prompt is drawn
+
 prompt_status() {
   echo -n "%(?.%F{green}.%F{red})● %f"
 }
+
 prompt_user() {
-  if [[ $UID -eq 0 ]]; then
-    echo -n "%K{red}%F{white}root %k%f"
-  fi
+  [[ $UID -eq 0 ]] && echo -n "%K{red}%F{white}root %k%f"
 }
+
+# shortened path: every folder but the last is reduced to its first letter (~/d/p/handles)
 prompt_dir() {
-  # colors for the prompt at https://framagit.org/mpo/dotfiles/blob/0fbc8e070793f060b90690fb99d526e8f94fd8ad/zsh/.zsh-color-names
-  # part of shrink path stolen from https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/shrink-path/shrink-path.plugin.zsh
-  echo -n "%F{blue}"
-  echo -n $(pwd | perl -pe "
-   BEGIN {
-      binmode STDIN,  ':encoding(UTF-8)';
-      binmode STDOUT, ':encoding(UTF-8)';
-    }; s|^$HOME|~|g; s|/([^/])[^/]*(?=/)|/\$1|g
-  ")
-  echo -n " %f"
+  local parts=("${(@s:/:)${(%):-%~}}") out i
+  for ((i = 1; i < $#parts; i++)); do
+    out+="${parts[i]:0:1}/"
+  done
+  out+="${parts[-1]}"
+  echo -n "%F{blue}${out//\%/%%} %f"
 }
+
 prompt_git() {
-  local repo st stash ref
-  # repo=$(git rev-parse --git-dir 2>/dev/null)
-  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
-    echo -n "%F{magenta}"
-
-    # is the repop dirty?
-    st=$(git status --porcelain 2> /dev/null | tail -n1)
-    if [[ -n $st ]]; then
-      echo -n "* "
-    fi
-
-    # does the repo has git stash?
-    stash=$(git rev-list --walk-reflogs --count refs/stash 2> /dev/null)
-    if [[ -n $stash ]]; then
-      echo -n "≡$stash "
-    fi
-
-    # branch name
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git show-ref --head -s --abbrev |head -n1 2> /dev/null)
-    echo -n "${ref/refs\/heads\//}"
-
-    echo -n " %f"
-  fi
+  git rev-parse --is-inside-work-tree >/dev/null 2>&1 || return
+  local stash ref
+  echo -n "%F{magenta}"
+  [[ -n "$(git status --porcelain 2>/dev/null | tail -n1)" ]] && echo -n "* "
+  stash=$(git rev-list --walk-reflogs --count refs/stash 2>/dev/null)
+  [[ -n "$stash" ]] && echo -n "≡$stash "
+  ref=$(git symbolic-ref HEAD 2>/dev/null) || ref=$(git show-ref --head -s --abbrev | head -n1 2>/dev/null)
+  echo -n "${ref#refs/heads/} %f"
 }
+
 PROMPT='
-%{%f%b%k%}$(prompt_status)${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS]} $(prompt_user)$(prompt_dir)\$ '
+%{%f%b%k%}$(prompt_status)${prompt_emojis[RANDOM % $#prompt_emojis + 1]} $(prompt_user)$(prompt_dir)\$ '
 RPROMPT='$(prompt_git)'
 
-# utils
-## https://github.com/wting/autojump
-[ -f `brew --prefix`/etc/profile.d/autojump.sh ] && . `brew --prefix`/etc/profile.d/autojump.sh
-
-
 # completions
-setopt ALWAYS_TO_END # cursor to end of the word
-setopt PATH_DIRS # search even if there is a slash (i.e. : useful for `bin/cons<tab>`)
-setopt AUTO_MENU # when i smash <tab>, you have to show me the completions, FAST
-setopt AUTO_PARAM_SLASH # if the completion is a dir, add the trailing slash
-setopt AUTO_REMOVE_SLASH
-setopt AUTO_LIST # automatically list choices on ambiguous completion.
-unsetopt MENU_COMPLETE # do not pick automatically the first completion
+setopt ALWAYS_TO_END # cursor to the end of the word after completing
+# setopt PATH_DIRS # complete commands containing a slash through the PATH (bin/cons<tab>)
+# already zsh defaults:
+# setopt AUTO_MENU
+# setopt AUTO_PARAM_SLASH
+# setopt AUTO_REMOVE_SLASH
+# setopt AUTO_LIST
+# unsetopt MENU_COMPLETE
 
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
+# extra definitions from the zsh-completions package, must come before compinit
+[[ -d "$HOMEBREW_PREFIX/share/zsh-completions" ]] && fpath=("$HOMEBREW_PREFIX/share/zsh-completions" $fpath)
 
+# turn the completion system on, with a full security check only once per 20 hours (-C skips it)
 autoload -Uz compinit
-_comp_files=($HOME/.zcompdump(Nm-20)) # 20 hours of cache on completions
+_comp_files=($HOME/.zcompdump(Nm-20))
 if (( $#_comp_files )); then
   compinit -i -C
 else
@@ -142,48 +128,23 @@ fi
 unset _comp_files
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
-zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' use-cache on # cache slow completions
 zstyle ':completion::complete:*' cache-path $HOME/.zcompcache
 
-if [[ -f $HOME/.github_token ]]; then
-  export GITHUB_TOKEN=$(cat $HOME/.github_token)
-fi
-
-# include other zshrc
-# . $(cd "$(dirname "$0")"; pwd)/../modules/docker/docker.zsh
-source "$(dirname ${0:A:h})/docker/docker.zsh" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
-
-# fancy
-alias ezs='vim ~/.zshrc'
-alias szs='source ~/.zshrc'
-alias h='history -iD'
-alias fuck='sudo $(history -p \!\!)'
-alias v=vim
-alias k=kubectl
-alias kstud='kubectl config set-context --current --namespace=studio'
-alias kprod='kubectl config set-context --current --namespace=production'
-alias top='btop'
-
+# environment
+# [[ -f $HOME/.github_token ]] && export GITHUB_TOKEN=$(cat $HOME/.github_token)
 export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export PATH="/Users/nyalab/.gem/ruby/2.6.0/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:$PATH:`yarn global bin`:$HOME/.cargo/bin:/opt/homebrew/opt/python@3.10/libexec/bin"
+# export LC_ALL="en_US.UTF-8" # overrides every other locale setting
+# export PATH="$PATH:$HOME/.cargo/bin"
+# export PATH="$PATH:$(yarn global bin)"
+# export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
+# export PNPM_HOME="$HOME/Library/pnpm"
+# export PATH="$PNPM_HOME:$PATH"
 
-eval "$(thefuck --alias)"
+# tool hooks
+eval "$(zoxide init zsh)" # z <part of a folder name> jumps to a frequently used folder
+# eval "$(thefuck --alias)"
+# [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh
 
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
-alias pn=pnpm
-# pnpm
-export PNPM_HOME="/Users/nyalab/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-export OPENAI_API_KEY="***REMOVED***"
-
-# todo better
-source "$(dirname ${0:A:h:h})/scripts/setups/shotgun/zshrc" # $0:A:h ($0 file, :A absolute with symlink, :h remove trailing) - https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-modifiers
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# node
+eval "$(fnm env --use-on-cd --shell zsh)"

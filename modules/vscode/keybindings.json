@@ -1,62 +1,21 @@
-// Place your key bindings in this file to override the defaults
+// Disabled legacy bindings, uncomment the ones you want back (the file must stay a valid array).
 [
-    {
-        "key": "alt+[BracketRight]",
-        "command": "editor.action.inlineSuggest.showNext"
-    },
-    {
-        "key": "alt+[BracketLeft]",
-        "command": "editor.action.inlineSuggest.showPrevious"
-    },
-    {
-        "key": "alt+[Period]",
-        "command": "editor.action.inlineSuggest.trigger"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "cmd+t",
-        "command": "workbench.action.terminal.split",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "cmd+w",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+alt+cmd+right",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+alt+cmd+down",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+alt+cmd+left",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+alt+cmd+up",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus"
-    },
-    // {
-    //     "key": "alt+[Backquote]",
-    //     "command": "editor.emmet.action.wrapWithAbbreviation",
-    //     "args": {
-    //         "abbreviation": "<>"
-    //     }
-    // }
+    // Copilot inline suggestions, from 2022. Physical key codes, probably for an AZERTY layout.
+    // { "key": "alt+[BracketRight]", "command": "editor.action.inlineSuggest.showNext" },
+    // { "key": "alt+[BracketLeft]", "command": "editor.action.inlineSuggest.showPrevious" },
+    // { "key": "alt+[Period]", "command": "editor.action.inlineSuggest.trigger" },
+
+    // Terminal focus toggle, from 2023. Moves focus instead of showing/hiding the panel.
+    // { "key": "ctrl+`", "command": "workbench.action.terminal.focus", "when": "!terminalFocus" },
+    // { "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
+
+    // Terminal split and close, from 2023. iTerm-style habits.
+    // { "key": "cmd+t", "command": "workbench.action.terminal.split", "when": "terminalFocus" },
+    // { "key": "cmd+w", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+
+    // Terminal pane switching, from 2023. iTerm-style habits.
+    // { "key": "shift+alt+cmd+right", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+    // { "key": "shift+alt+cmd+down", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+    // { "key": "shift+alt+cmd+left", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
+    // { "key": "shift+alt+cmd+up", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" }
 ]

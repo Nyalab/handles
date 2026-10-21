@@ -1,14 +1,5 @@
-### OSX ###
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must ends with two \r.
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+/node_modules/
+/modules/vscode/settings.json
+/private/*
+!/private/.gitkeep
+.handles-config.*/

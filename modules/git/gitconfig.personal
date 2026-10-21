@@ -1,0 +1,3 @@
+[include]
+	path = gitconfig
+	path = ../../private/gitconfig.personal-identity

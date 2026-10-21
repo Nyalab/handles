@@ -1,0 +1,10 @@
+{
+  "name": "handles",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1"
+  }
+}

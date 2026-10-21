@@ -1,0 +1,14 @@
+[include]
+	path = gitconfig
+	path = ../../private/gitconfig.work-identity
+
+[core]
+	# convert CRLF to LF on commit, leave files untouched on checkout
+	autocrlf = input
+
+# Repos cloned under ~/dev/personal/ use the personal identity (name, email, github.user)
+# instead of the work one above. gitdir: matches the repo's folder, so every repo created or
+# cloned there later is covered. The trailing "/" is required (it means "everything below").
+# Keep it below the work identity include so it takes precedence.
+[includeIf "gitdir:~/dev/personal/"]
+	path = ../../private/gitconfig.personal-identity
