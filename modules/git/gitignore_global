@@ -1,13 +1,13 @@
-### macOS ###
-*.DS_Store
+# macOS
+.DS_Store
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
+# custom folder icon file: "Icon" followed by a carriage return (a control character)
+Icon[[:cntrl:]]
 
-# Thumbnails
+# sidecar files macOS writes on exFAT, FAT and network drives
 ._*
 
-# Editors
-.vscode
+# editors
+# .vscode
