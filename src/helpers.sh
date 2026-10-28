@@ -1,25 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# . $(cd "$(dirname "$0")"; pwd)/spinner.sh
-
-display_info() {
-  print -P "%F{blue}> info:%f 🤖 ${@}"
-}
-display_warning() {
-  print -P "%F{yellow}> warning:%f 🤖 ${@}"
-}
-display_error() {
-  print -P "%F{red}> error:%f 🤖 ${@}"
-}
-display_success() {
-  print -P "%F{green}> success:%f 🤖 ${@}"
-}
+display_info() { printf '\033[34m> info:\033[0m 🤖 %s\n' "$*"; }
+display_warning() { printf '\033[33m> warning:\033[0m 🤖 %s\n' "$*"; }
+display_error() { printf '\033[31m> error:\033[0m 🤖 %s\n' "$*" >&2; }
+display_success() { printf '\033[32m> success:\033[0m 🤖 %s\n' "$*"; }
 
 command_exists() {
-  which $1
-}
-
-keep_sudo_alive() {
-  sudo -v
-  while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+  command -v "$1" >/dev/null 2>&1
 }

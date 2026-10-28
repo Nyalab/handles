@@ -1,0 +1,22 @@
+# one extension id per line, find them with `code --list-extensions`
+# details: https://marketplace.visualstudio.com/items?itemName=<id>
+
+# code quality
+dbaeumer.vscode-eslint
+EditorConfig.EditorConfig
+usernamehw.errorlens
+yoavbls.pretty-ts-errors
+
+# git
+eamodio.gitlens
+mhutchie.git-graph
+pomber.git-file-history
+
+# navigation
+alefragnani.project-manager
+antfu.file-nesting
+Gruntfuggly.todo-tree
+bierner.docs-view
+
+# themes
+daylerees.rainglow
